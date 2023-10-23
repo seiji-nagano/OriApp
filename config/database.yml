@@ -8,7 +8,7 @@ development:
   username: root
   password:
   host: localhost
-  database: OriApp_development
+  database: pictweet2_development
 
 test:
   <<: *default
@@ -16,7 +16,7 @@ test:
   username: root
   password:
   host: localhost
-  database: OriApp_test
+  database: pictweet2_test
 
 production:
   <<: *default

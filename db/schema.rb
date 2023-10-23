@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_20_022717) do
     t.integer "user_id"
     t.integer "tweet_id"
     t.text "text"
+    t.text "video"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,6 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_20_022717) do
     t.string "title"
     t.string "text"
     t.text "video"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"

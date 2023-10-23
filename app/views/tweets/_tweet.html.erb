@@ -1,4 +1,9 @@
-    <div class="content_post" style="background-image: url(<%= tweet.video %>);">
+    <div class="content_post">
+        <div class="video-container">
+        <% if tweet.video.attached? %>
+          <video src="<%= rails_blob_path(tweet.video) %>" type="video/mp4" controls class="sample_video"></video>
+        <% end %>
+        </div>
       <div class="more">
         <span><%= image_tag 'arrow_top.png' %></span>
         <ul class="more_list">
@@ -15,13 +20,16 @@
           <% end %>
         </ul>
       </div>
+    </div>
     <div class="text-container">
-      <p class="tweet-title"><%= tweet.title %></p> 
+      <p class="tweet-title"><%= image_tag("cman20231023152149797.png") %>  <%= tweet.title %></p>
+      <p><%= image_tag("cman20231023152704290.png") %>  <%= tweet.category.category %></p>  
+      <p class="tweet-text"><%= image_tag("cman20231023153013393.png") %></p>
+      <P><%= tweet.text %></P>
       <span class="name">
         <a href="/users/<%= tweet.user.id %>">
       <span>投稿者</span><%= tweet.user.nickname %>
         </a>
       </span>
     </div>
-    <p class="tweet-text"><%= tweet.text %></p>
     </div>

@@ -18,21 +18,22 @@
         </ul>
       </div>
     <% end %>
+  </div>
+</div>
     <div class="text-container">
-      <p class="tweet-title"><%= @tweet.title %></p> 
+      <p class="tweet-title"><%= @tweet.title %></p>
+      <p class="tweet-text"><%= @tweet.text %></p> 
       <span class="name">
         <a href="/users/<%= @tweet.user.id %>">
       <span>投稿者</span><%= @tweet.user.nickname %>
         </a>
       </span>
     </div>
-    <p class="tweet-text"><%= @tweet.text %></p>
-  </div>
-</div>
   <div class="container">
     <% if user_signed_in? %>
       <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
         <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+        <%= form.file_field :video %>
         <%= form.submit "SEND" %>
       <% end %>
     <% else %>
@@ -44,6 +45,9 @@
         <p>
           <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %></strong>
           <%= comment.text %>
+        <% if comment.video.attached? %>
+          <video src="<%= rails_blob_path(comment.video) %>" type="video/mp4" controls class="sample_video"></video>
+        <% end %>
         </p>
       <% end %>
     </div>
