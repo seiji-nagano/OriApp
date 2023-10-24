@@ -1095,3 +1095,17 @@ footer p {
 .search-form .search-btn {
   width: 10%;
 }
+
+.mystatus{
+  width: 1000px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.update{
+  width: 1000px;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -4,3 +4,44 @@
     <%= render partial: "tweets/tweet", locals: { tweet: tweet } %>
   <% end %>
 </div>
+
+<div class ="mystatus">
+<canvas id="myChart3"></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+var ctx = document.getElementById('myChart3').getContext('2d');
+var myLineChart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bar',
+ 
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+ 
+    // Configuration options go here
+    options: {}
+});
+ 
+function updateChart(){
+  // 最初のデータセットの値を'March'を'+1'に更新します。
+  myLineChart.data.datasets[0].data[2] = myLineChart.data.datasets[0].data[2]+1;
+  myLineChart.update();
+}
+function updateChar(){
+  // 最初のデータセットの値を'March'を'+1'に更新します。
+  myLineChart.data.datasets[0].data[3] = myLineChart.data.datasets[0].data[3]+1;
+  myLineChart.update();
+}
+</script>
+</div>
+<div class = "update">
+  <div class = "update_chart"><button onclick="updateChart()" type="button">更新</button></div>
+  <div class = "update_char"><button onclick="updateChar()" type="button">更新</button></div>
+</div>
