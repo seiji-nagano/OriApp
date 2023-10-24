@@ -3,14 +3,12 @@ class Category < ActiveHash::Base
     { id: 1, category: '---' },
     { id: 2, category: 'シュート' },
     { id: 3, category: 'ドリブル' },
-    { id: 4, category: 'ショートパス' },
-    { id: 5, category: 'ロングパス' },
-    { id: 6, category: 'ヘディング' },
-    { id: 7, category: 'トラップ' },
-    { id: 8, category: 'ディフェンス' },
-    { id: 9, category: 'リフティング' },
-    { id: 10, category: 'セービング' },
-    { id: 11, category: 'その他' }
+    { id: 4, category: 'パス' },
+    { id: 5, category: 'リフティング' },
+    { id: 6, category: 'トラップ' },
+    { id: 7, category: 'ディフェンス' },
+    { id: 8, category: 'セービング' },
+    { id: 9, category: 'その他' }
   ]
 
   include ActiveHash::Associations

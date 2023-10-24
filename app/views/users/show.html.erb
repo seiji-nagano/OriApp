@@ -9,6 +9,7 @@
 <canvas id="myChart3"></canvas>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script>
+
 var ctx = document.getElementById('myChart3').getContext('2d');
 var myLineChart = new Chart(ctx, {
     // The type of chart we want to create
@@ -16,12 +17,12 @@ var myLineChart = new Chart(ctx, {
  
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['シュート', 'ドリブル', 'パス', 'リフティング', 'トラップ', 'ディフェンス', 'セービング', '目標'],
         datasets: [{
-            label: 'My First dataset',
+            label: 'My Status',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            data: [0, 0, 0, 0, 0, 0, 0, 20]
         }]
     },
  
@@ -31,17 +32,48 @@ var myLineChart = new Chart(ctx, {
  
 function updateChart(){
   // 最初のデータセットの値を'March'を'+1'に更新します。
-  myLineChart.data.datasets[0].data[2] = myLineChart.data.datasets[0].data[2]+1;
+  myLineChart.data.datasets[0].data[0] = myLineChart.data.datasets[0].data[0]+1;
   myLineChart.update();
 }
 function updateChar(){
   // 最初のデータセットの値を'March'を'+1'に更新します。
+  myLineChart.data.datasets[0].data[1] = myLineChart.data.datasets[0].data[1]+1;
+  myLineChart.update();
+}
+function updateCha(){
+  // 最初のデータセットの値を'March'を'+1'に更新します。
+  myLineChart.data.datasets[0].data[2] = myLineChart.data.datasets[0].data[2]+1;
+  myLineChart.update();
+}
+function updateCh(){
+  // 最初のデータセットの値を'March'を'+1'に更新します。
   myLineChart.data.datasets[0].data[3] = myLineChart.data.datasets[0].data[3]+1;
   myLineChart.update();
 }
+function updateC(){
+  // 最初のデータセットの値を'March'を'+1'に更新します。
+  myLineChart.data.datasets[0].data[4] = myLineChart.data.datasets[0].data[4]+1;
+  myLineChart.update();
+}
+function update(){
+  // 最初のデータセットの値を'March'を'+1'に更新します。
+  myLineChart.data.datasets[0].data[5] = myLineChart.data.datasets[0].data[5]+1;
+  myLineChart.update();
+}
+function updat(){
+  // 最初のデータセットの値を'March'を'+1'に更新します。
+  myLineChart.data.datasets[0].data[6] = myLineChart.data.datasets[0].data[6]+1;
+  myLineChart.update();
+}
+
 </script>
 </div>
 <div class = "update">
-  <div class = "update_chart"><button onclick="updateChart()" type="button">更新</button></div>
-  <div class = "update_char"><button onclick="updateChar()" type="button">更新</button></div>
+  <div class = "update_chart"><button onclick="updateChart()" type="button">シュート</button></div>
+  <div class = "update_char"><button onclick="updateChar()" type="button">ドリブル</button></div>
+  <div class = "update_char"><button onclick="updateCha()" type="button">パス</button></div>
+  <div class = "update_char"><button onclick="updateCh()" type="button">リフティング</button></div>
+  <div class = "update_char"><button onclick="updateC()" type="button">トラップ</button></div>
+  <div class = "update_char"><button onclick="update()" type="button">ディフェンス</button></div>
+  <div class = "update_char"><button onclick="updat()" type="button">セービング</button></div>
 </div>
