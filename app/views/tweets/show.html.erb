@@ -48,6 +48,19 @@
         <% if comment.video.attached? %>
           <video src="<%= rails_blob_path(comment.video) %>" type="video/mp4" controls class="sample_video"></video>
         <% end %>
+        <% if user_signed_in? && current_user.id == comment.user_id %>
+          <div class="more">
+            <span><%= image_tag 'arrow_top.png' %></span>
+              <ul class="more_list">
+              <li>
+                 <%= link_to '編集', edit_tweet_path(@tweet.id) %>
+             </li>
+              <li>
+                <%= link_to '削除', tweet_comment_path(@tweet, comment), data: { turbo_method: :delete } %>
+              </li>
+              </ul>
+            </div>
+          <% end %>
         </p>
       <% end %>
     </div>
