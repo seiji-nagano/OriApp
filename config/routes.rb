@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'blogs/index'
+  resources :blogs
   devise_for :users
   root to: 'tweets#index'
   resources :tweets do

@@ -859,10 +859,13 @@ header.header .user_nav ul li a {
   width: 700px;
   margin: 0 auto; 
   margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .sample_video{
   width: 100%;
+  margin: 0 auto; 
 }
 
 div.contents.row h2 {
@@ -1108,4 +1111,163 @@ footer p {
   margin-top: 100px;
   display: flex;
   justify-content: space-between;
+}
+
+/* カレンダーコンテナ */
+.simple-calendar {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* カレンダーヘッダー */
+.calendar-heading {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 前の月と次の月へのリンク */
+.calendar-heading a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* カレンダータイトル */
+.calendar-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* カレンダーテーブル */
+.table {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* カレンダーの日付セル */
+.table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* カレンダーの曜日セル */
+.table th, .table td {
+  padding: 10px;
+}
+
+/* 日付セルにカスタムクラスを適用 */
+.table td.custom-class {
+  background-color: #ffcc00;
+}
+
+/* イベントボックス */
+.table td .event-box {
+  background-color: #ffcc00;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+/* イベント内のリンク */
+.table td .event-box a {
+  color: #000;
+  text-decoration: none;
+}
+
+.show {
+  width: 80%; /* ウィジェットの幅を調整 */
+  margin: 0 auto; /* ウィジェットを中央揃えにする */
+  padding: 20px;
+  background-color: #f5f5f5; /* 背景色を設定 */
+  border: 1px solid #ddd; /* ボーダーを設定 */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 影を追加 */
+}
+
+.show p {
+  margin: 10px 0; /* 各パラグラフのマージンを調整 */
+}
+
+.show strong {
+  font-weight: bold; /* 強調テキストに太字を適用 */
+}
+
+/* リンクボタンのスタイル */
+.show a {
+  text-decoration: none; /* リンクの下線を非表示 */
+  padding: 5px 10px; /* パディングを設定 */
+  background-color: #007bff; /* 背景色を設定 */
+  color: #fff; /* テキストの色を設定 */
+  border: 1px solid #007bff; /* ボーダーを設定 */
+  border-radius: 5px; /* ボタンの角を丸くする */
+  margin-right: 10px; /* ボタン間のマージンを調整 */
+}
+
+.show a:hover {
+  background-color: #0056b3; /* マウスオーバー時の背景色を設定 */
+  border: 1px solid #0056b3; /* マウスオーバー時のボーダーを設定 */
+}
+
+/* 削除リンクに赤い色を適用 */
+.show a.delete {
+  background-color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.show a.delete:hover {
+  background-color: #bd2130;
+  border: 1px solid #bd2130;
+}
+
+/* スケジュールテーブル全体のスタイル */
+.toppage {
+  text-align: center; /* テキストを中央揃えに */
+  margin: 20px;
+  background: url(data:image/jpeg;base64,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);
+  background-size: cover;
+}
+
+.schedule {
+  font-size: 24px; /* スケジュールタイトルのフォントサイズを大きくする */
+  margin-bottom: 20px; /* タイトルとテーブルの間にマージンを追加 */
+}
+
+/* テーブル全体のスタイル */
+.table {
+  width: 100%; /* テーブルの幅を100%に */
+  border-collapse: collapse; /* セルのボーダーを重ならないようにする */
+}
+
+/* テーブルヘッダのスタイル */
+.thead-light {
+  background-color: #f0f0f0; /* ヘッダの背景色を設定 */
+}
+
+/* テーブルヘッダセルのスタイル */
+.thead-light th {
+  padding: 10px; /* セルのパディングを設定 */
+  text-align: left; /* テキストを左揃えに */
+}
+
+/* テーブルデータセルのスタイル */
+.table td {
+  padding: 10px; /* セルのパディングを設定 */
+  text-align: left; /* テキストを左揃えに */
+}
+
+/* リンクのスタイル */
+.table a {
+  text-decoration: none; /* リンクの下線を非表示に */
+  color: #007bff; /* リンクのデフォルトの色を設定 */
+}
+
+.table a:hover {
+  color: #0056b3; /* マウスオーバー時のリンクの色を設定 */
 }
