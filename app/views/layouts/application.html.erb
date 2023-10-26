@@ -13,7 +13,10 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><%= link_to image_tag("サッカーのフリーイラスト.png", class:"soccer-logo") %><a href="/">Treino</a></h1>
+        <div class="grid-6 flex-container">
+          <%= link_to image_tag("サッカーのフリーイラスト.png", class: "soccer-logo"), root_path %>
+          <%= link_to image_tag("cman20231025170403245.png", class: "title-logo"), root_path %>
+        </div>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
             <span><%= current_user.nickname %>
