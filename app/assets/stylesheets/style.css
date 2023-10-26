@@ -643,6 +643,7 @@ html {
 }
 
 body {
+  height: auto;
   padding-top: 60px;
   background-size: cover;
   background-image: url("https://img.freepik.com/premium-photo/football-stadium-3d-rendering-soccer-stadium-with-crowded-field-arena_3544-1361.jpg?size=626&ext=jpg&ga=GA1.1.1657676026.1698043673&semt=sph");
@@ -1119,18 +1120,22 @@ footer p {
   width: 10%;
 }
 
-.mystatus{
+.mystatus {
   width: 1000px;
   margin: auto;
   margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.8); /* 背景を透明に */
+  padding: 20px; /* グラフコンテナの余白を追加 */
 }
 
-.update{
+.update {
   width: 1000px;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 20px; /* 上部マージンを縮小 */
   display: flex;
   justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8); /* 背景を透明に */
+  padding: 10px; /* ボタンコンテナの余白を追加 */
 }
 
 /* カレンダーコンテナ */
